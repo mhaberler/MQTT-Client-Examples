@@ -12,7 +12,7 @@ const mqtt = require('mqtt')
  * Using MQTT over TCP with mqtt and mqtts protocols
  * EMQX's mqtt connection default port is 1883, mqtts is 8883
  */
-const url = 'mqtt://broker.emqx.io:1883'
+const url = 'mqtt://172.16.0.217:1883'
 
 // Create an MQTT client instance
 const options = {
@@ -21,8 +21,8 @@ const options = {
   connectTimeout: 4000,
   // Authentication
   clientId: 'emqx_test',
-  username: 'emqx_test',
-  password: 'emqx_test',
+  // username: 'emqx_test',
+  // password: 'emqx_test',
 }
 const client  = mqtt.connect(url, options)
 client.on('connect', function () {
