@@ -19,10 +19,10 @@ init({
   sync : {}
 });
 const options = {
-  host: 'broker.emqx.io',
-  port: 8083,
-  path: '/testTopic',
-  id: 'id_' + parseInt(Math.random()*100000)
+  host: '172.16.0.217',
+  port: 1883,
+  path: '',
+  id: 'id_' + parseInt(Math.random() * 100000),
 };
 // 创建客户端实例
 client = new Paho.MQTT.Client(options.host, options.port, options.path);
